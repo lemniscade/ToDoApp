@@ -1,0 +1,14 @@
+@mixin position($direction: column, $align: center, $justify: space-between) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+.vertical {
+  @include position;
+}
+
+.horizontal {
+  @include position($direction: row, $align: center, $justify: space-between);
+}
